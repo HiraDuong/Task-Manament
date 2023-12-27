@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .App-logo {
@@ -35,4 +37,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.app-body{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 200px;
+  width: calc(100% - 200px);
 }

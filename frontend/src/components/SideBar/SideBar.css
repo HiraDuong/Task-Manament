@@ -1,0 +1,32 @@
+.nav-menu {
+  display: flex; /* Đặt các mục menu theo hàng ngang */
+  justify-content: center; /* Căn giữa các mục menu theo chiều ngang */
+  position: fixed; /* Đặt vị trí của thanh menu cố định, không di chuyển khi cuộn trang */
+  top: 0; /* Đặt vị trí từ đỉnh trang là 0, nghĩa là thanh menu sẽ nằm ở đầu trang */
+  transition: 350ms; /* Thời gian chuyển đổi khi có thay đổi, ví dụ như khi thanh menu hiện hoặc ẩn */
+  z-index: 10; /* Đặt độ ưu tiên hiển thị của thanh menu, số càng lớn thì lớp đó càng được hiển thị lên trên */
+}
+
+.nav-menu.active {
+  left: 0; /* Khi thanh menu có class "active", đặt vị trí từ bên trái của trang là 0, nghĩa là thanh menu sẽ hiện lên */
+}
+
+.nav-text {
+  display: flex; /* Đặt các phần tử con theo hàng ngang */
+  justify-content: start; /* Căn lề trái cho các phần tử con */
+  align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+  padding: 8px 0px 8px 16px; /* Đặt padding cho text: top và bottom là 8px, right là 0px, left là 16px */
+  list-style: none; /* Loại bỏ các dấu đầu dòng mặc định của danh sách */
+  height: 60px; /* Đặt chiều cao cho mỗi mục text trong menu */
+}
+
+.navbar{
+  margin: 20px;
+
+}
+
+.com-side-bar{
+  display: flex;
+  flex-direction: column;
+ 
+}
