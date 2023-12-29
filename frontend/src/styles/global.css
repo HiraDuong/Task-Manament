@@ -2,3 +2,18 @@ li {
     list-style: none;
     margin: 0;
 }
+
+body{
+    color: rgb(255, 94, 1);
+}
+.row{
+    display: flex !important;
+    flex-direction: row !important;
+}
+.col{
+    display: flex !important;
+    flex-direction: column !important;
+}
+a{
+    text-decoration: none !important;
+}

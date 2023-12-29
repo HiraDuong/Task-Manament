@@ -1,0 +1,67 @@
+/* TaskItems.css */
+
+.task-items div {
+margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.task-items h1 {
+    font-size: 20px;
+    color: #333;
+}
+
+.task-items h2 {
+    font-size: 16px;
+    color: #666;
+}
+
+.task-items button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+
+}
+
+.task-items button:hover {
+    background-color: #0056b3;
+}
+
+.task-items form {
+    margin-bottom: 10px;
+}
+
+.task-items form input[type="text"] {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.task-items{
+    border: 1px solid #ddd;
+    width:800px ;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+.task-items .task-text{
+    width:800px ;
+    text-align: left;
+}
+ .show-all-btn{
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+}

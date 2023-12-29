@@ -1,0 +1,13 @@
+/* MultiSelect.css */
+.multi-select {
+    position: relative;
+    width: 600px; /* Đặt chiều rộng mong muốn */
+    display: flex;
+    flex-direction: row;
+}
+  
+.multi-select  .css-1fdsijx-ValueContainer{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
