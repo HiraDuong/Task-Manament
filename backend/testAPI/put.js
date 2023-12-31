@@ -1,12 +1,9 @@
 const { APIpath } = require("../config/APIpath");
-const subPath = '/users/3';
+const subPath = '/tasks/4/status';
 const getPath = `${APIpath}${subPath}`;
 
 const PUTData = {
-        user_name: 'hira3',
-        password: 'duongduong',
-        name: 'hoangdeptrai',
-        email: 'hira3@gmail.com',
+  status: true,
 }
 
 
