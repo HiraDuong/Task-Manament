@@ -1,6 +1,7 @@
 const { Op, where } = require("sequelize");
 const TaskLabel = require("../models/TaskLabelModel");
-
+const Task = require("../models/TaskModel");
+const Label = require("../models/LabelModel");
 // get all task labels
 const getAllTaskLabels = async (req, res) => {
     try {
@@ -14,7 +15,6 @@ const getAllTaskLabels = async (req, res) => {
 
 // get all labels of a task
 const getTaskLabels = async (req, res) => {
-    console.log("getTaskLabels");
     try {
         const { task_id } = req.params;
 
@@ -54,7 +54,8 @@ const getLabelTasks = async (req, res) => {
 // get all tasks of some labels
 const getSomeLabelTasks = async (req, res) => {
     try {
-        const listlabel_id = req.body.listlabel_id; // Giả sử cậu gửi mảng listlabel_id qua body
+        const listlabel_id = req.body.list_label_id; // Giả sử cậu gửi mảng listlabel_id qua body
+
         const labelTasks = await TaskLabel.findAll({
             where: {
                 label_id: {

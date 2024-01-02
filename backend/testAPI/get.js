@@ -1,5 +1,5 @@
 const { APIpath } = require("../config/APIpath");
-const subPath = '/some_label_tasks';
+const subPath = '/task_labels/2';
 const getPath = `${APIpath}${subPath}`;
 
 const fetchData = async () => {
