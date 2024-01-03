@@ -16,4 +16,6 @@ router.get('/tasks/:user_id/:status', TaskControllers.getTasksByStatus);
 router.put('/tasks/:task_id/status', TaskControllers.updateStatus);
 // search tasks by user_id and task_name
 router.get('/search/:user_id/tasks', TaskControllers.searchTasks);
+// get tasks by due date
+router.get('/tasks/:user_id/due/:due_date', TaskControllers.getTasksByDueDate);
 module.exports = router;

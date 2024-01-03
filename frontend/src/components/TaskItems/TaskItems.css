@@ -1,19 +1,18 @@
 /* TaskItems.css */
 
-.task-items div {
+.task-items  {
 margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
 }
 
-.task-items h1 {
-    font-size: 20px;
-    color: #333;
+.task-items h3 {
+    font-weight: 900;
+    color: rgb(255, 94, 1);
 }
 
 .task-items h2 {
-    font-size: 16px;
-    color: #666;
+    color: rgb(255, 94, 1);
 }
 
 .task-items button {
@@ -54,6 +53,18 @@ margin: 10px 0;
 .task-items .task-text{
     width:800px ;
     text-align: left;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.task-items .row{
+    gap: 20px;
+}
+
+
+.task-items .row p{
+    width: 45%;
 }
  .show-all-btn{
     margin-right: 10px;

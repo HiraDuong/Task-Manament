@@ -1,7 +1,7 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import { IoToday, IoFlagSharp } from "react-icons/io5";
+import { IoToday, IoFlagSharp, IoTrashBin } from "react-icons/io5";
 import { FaCalendarAlt } from "react-icons/fa";
 
 export const SideBarData = [
@@ -28,6 +28,13 @@ export const SideBarData = [
         title: 'Upcoming',
         path: '/upcoming',
         icon: <FaCalendarAlt style={{ color: '#fff' }} size={30} />,
+        cName: 'nav-text'
+      },
+      
+      {
+        title: 'Expire',
+        path: '/upcoming',
+        icon: <IoTrashBin style={{ color: '#fff' }} size={30} />,
         cName: 'nav-text'
       },
     // Thêm các mục khác tại đây

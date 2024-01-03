@@ -5,8 +5,10 @@ const LabelsRoutes = require('./src/routes/LabelRoutes.js');
 const TasksRoutes = require('./src/routes/TaskRoutes.js');
 const TaskLabelsRoutes = require('./src/routes/TaskLabelsRoutes.js');
 const app = express();
+const cors= require('cors');
 
 app.use(express.json());
+app.use(cors())
 app.use('/API',[
     UserRoutes,
     LabelsRoutes,

@@ -6,8 +6,12 @@ import "./SideBar.css";
 import { IconContext } from "react-icons";
 import { IoMdAdd, IoIosClose } from "react-icons/io";
 import MultiSelect from "../MultiSelect/MultiSelect";
+import { useUser } from "../../UserContext";
+
 
 const SideBar = () => {
+  const {user} = useUser()
+
   const [activeIndex, setActiveIndex] = useState(null);
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -59,7 +63,7 @@ const SideBar = () => {
     <div className="com-side-bar">
       <div className="user-avatar-button" onClick={handleAvtPopup}>
         <img
-          src="\images\default_avt.jpg"
+          src= {user.avt}
           alt="user-avatar"
           className="user-avatar"
         />
@@ -69,7 +73,7 @@ const SideBar = () => {
             <Link>Log out</Link>
           </div>
         )}
-        <div>UserName</div>
+        <div>{user.name}</div>
       </div>
       <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
         <button className="add-task-btn" onClick={handleShowForm}>

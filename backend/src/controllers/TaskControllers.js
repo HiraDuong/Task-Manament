@@ -1,6 +1,7 @@
 
 const Tasks = require("../models/TaskModel");
 const Users = require("../models/UserModel");
+const TaskLabels = require("../models/TaskLabelModel");
 const { Op } = require("sequelize");
 // Get all tasks by user_id
 const getAllTasks = async (req, res) => {
@@ -16,6 +17,26 @@ const getAllTasks = async (req, res) => {
     res.status(500).json(error);
   }
 }
+// get all tasks due today
+const getTasksByDueDate = async (req, res) => {
+  const {due_date} = req.params
+  try {
+    const tasks = await Tasks.findAll({
+      where :{
+        due_date: due_date
+      },
+      include: [
+        {
+          model: TaskLabels,
+          attributes: ["label_id"],
+        },
+      ],
+    } )
+    res.status(200).json(tasks);
+  }catch (error) {
+    res.status(500).json(error);
+  }
+} 
 // Search tasks by task_name
 const searchTasks = async (req, res) => {
     try {
@@ -159,4 +180,5 @@ module.exports = {
     deleteTask,
     getTasksByStatus,
     updateStatus,
+    getTasksByDueDate,
 }

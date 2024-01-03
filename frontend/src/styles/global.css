@@ -17,3 +17,8 @@ body{
 a{
     text-decoration: none !important;
 }
+
+h1,h2,h3,p{
+    padding: 0;
+    margin: 0;
+}
